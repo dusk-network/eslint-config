@@ -12,6 +12,6 @@ npm i -D eslint @dusk/eslint-config
 
 ```json
   "eslintConfig": {
-    "extends": "@svelterialjs"
+    "extends": "@dusk"
   }
 ```
