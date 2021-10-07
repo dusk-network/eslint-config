@@ -5,13 +5,13 @@
 ## Installation
 
 ```bash
-npm i -D eslint @dusk/eslint-config
+npm i -D eslint @dusk-network/eslint-config
 ```
 
 ## Usage
 
 ```json
   "eslintConfig": {
-    "extends": "@dusk"
+    "extends": "@dusk-network"
   }
 ```
