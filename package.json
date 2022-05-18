@@ -1,6 +1,6 @@
 {
   "name": "@dusk-network/eslint-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "index.js",
   "description": "ESLint config used by Dusk JavaScript apps",
   "homepage": "https://dusk-network.github.io/dusk-eslint-config/",
@@ -11,12 +11,15 @@
   "license": "MPL-2.0",
   "author": "Kieran Hall <kieran@dusk.network>",
   "peerDependencies": {
-    "eslint": "^8.6.0",
-    "eslint-plugin-svelte3": "^3.4.0",
-    "eslint-plugin-tailwindcss": "^3.2.0",
-    "svelte": "^3.46.1"
+    "eslint": "^8.15.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "eslint-plugin-tailwindcss": "^3.5.0",
+    "svelte": "^3.48.0"
   },
   "engines": {
-    "node": "^14.0.0 || ^17.0.0 || ^18.0.0"
+    "node": "^14.17.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
