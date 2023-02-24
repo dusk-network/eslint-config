@@ -1,6 +1,6 @@
 {
   "name": "@dusk-network/eslint-config",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "main": "index.js",
   "description": "ESLint config used by Dusk JavaScript apps",
   "homepage": "https://dusk-network.github.io/dusk-eslint-config/",
@@ -13,8 +13,7 @@
   "peerDependencies": {
     "eslint": "^8.34.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "eslint-plugin-tailwindcss": "^3.8.3",
-    "svelte": "^3.55.1"
+    "eslint-plugin-tailwindcss": "^3.8.3"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
