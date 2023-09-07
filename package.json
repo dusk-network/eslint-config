@@ -39,7 +39,7 @@
 		"check-svelte": "eslint-find-rules -d svelte/index.js",
 		"lint": "eslint ."
 	},
-	"version": "1.2.8",
+	"version": "2.0.0",
 	"devDependencies": {
 		"@jsdevtools/version-bump-prompt": "^6.1.0",
 		"eslint": "^8.48.0",
