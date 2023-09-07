@@ -1,24 +1,58 @@
 {
-  "name": "@dusk-network/eslint-config",
-  "version": "1.2.8",
-  "main": "index.js",
-  "description": "ESLint config used by Dusk JavaScript apps",
-  "homepage": "https://dusk-network.github.io/dusk-eslint-config/",
-  "bugs": {
-    "url": "https://github.com/dusk-network/dusk-eslint-config/issues"
-  },
-  "repository": "https://github.com/dusk-network/dusk-eslint-config",
-  "license": "MPL-2.0",
-  "author": "Kieran Hall <kieran@dusk.network>",
-  "dependencies": {
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "eslint-plugin-tailwindcss": "^3.8.3"
-  },
-  "peerDependencies": {
-    "eslint": "^8.34.0"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+	"author": {
+		"name": "Dusk Network B.V.",
+		"url": "https://dusk.network/",
+		"mail": "info@dusk.network"
+	},
+	"bugs": "https://github.com/dusk-network/dusk-eslint-config/issues/",
+	"contributors": [
+		"Andrea Scartabelli <andrea.scartabelli@gmail.com>",
+		"Kieran Hall <kieran@dusk.network>"
+	],
+	"description": "ESLint config used by Dusk JavaScript apps",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"files": [
+		"js/**/*.js",
+		"svelte/**/*.js"
+	],
+	"homepage": "https://github.com/dusk-network/dusk-eslint-config/",
+	"keywords": [
+		"eslint",
+		"eslintconfig"
+	],
+	"license": "MPL-2.0",
+	"name": "@dusk-network/eslint-config",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dusk-network/dusk-eslint-config.git"
+	},
+	"scripts": {
+		"bump": "bump package.json package-lock.json",
+		"check": "npm run check-rules && npm run lint",
+		"check-js": "eslint-find-rules -d js/index.js",
+		"check-rules": "npm run check-js && npm run check-svelte",
+		"check-svelte": "eslint-find-rules -d svelte/index.js",
+		"lint": "eslint ."
+	},
+	"version": "1.2.8",
+	"devDependencies": {
+		"@jsdevtools/version-bump-prompt": "^6.1.0",
+		"eslint": "^8.48.0",
+		"eslint-find-rules": "^4.1.0",
+		"eslint-plugin-import": "^2.28.1",
+		"eslint-plugin-svelte": "^2.33.0",
+		"svelte": "^4.2.0"
+	},
+	"optionalDependencies": {
+		"eslint-plugin-svelte": ">=2.0.0"
+	},
+	"peerDependencies": {
+		"eslint": ">=8.0.0",
+		"eslint-plugin-import": ">=2.0.0"
+	}
 }
