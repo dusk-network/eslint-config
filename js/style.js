@@ -1,6 +1,10 @@
 module.exports = {
 	rules: {
 		"array-bracket-newline": ["error", "consistent"],
+		"arrow-spacing": [
+			"error",
+			{ "after": true, "before": true }
+		],
 		"brace-style": ["error", "1tbs", { "allowSingleLine": true }],
 		"camelcase": "error",
 		"comma-dangle": ["error", "never"],
