@@ -42,7 +42,7 @@ module.exports = {
 				"elements": [
 					"applet", "basefont", "center", "dir",
 					"embed", "font", "image", "isindex",
-					"listing", "marquee", "menu", "plaintext",
+					"listing", "marquee", "menuitem", "plaintext",
 					"s", "strike", "u", "xmp"
 				],
 				"message": "Do not use deprecated HTML tags"
