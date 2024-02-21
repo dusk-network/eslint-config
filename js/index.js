@@ -9,7 +9,8 @@ module.exports = {
 		"eslint:recommended",
 		"plugin:import/errors",
 		"plugin:import/warnings",
-		...rules
+		"prettier",
+		...rules,
 	],
 	parserOptions: {
 		ecmaVersion: "latest",
