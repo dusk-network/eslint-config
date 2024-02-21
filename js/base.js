@@ -7,26 +7,16 @@ module.exports = {
 		"consistent-this": "error",
 		"curly": ["error", "all"],
 		"default-case": "error",
-		"dot-location": ["error", "property"],
 		"dot-notation": "error",
 		"eqeqeq": "error",
-		"func-call-spacing": ["error", "never"],
 		"max-depth": ["error", 3],
-		"max-len": ["error", {
-			"code": 110,
-			"comments": 110,
-			"ignorePattern": "^ \\* @overview",
-			"ignoreUrls": true
-		}],
 		"max-nested-callbacks": ["error", 3],
 		"max-params": ["error", 5],
 		"max-statements": ["error", 15, { "ignoreTopLevelFunctions": true }],
-		"max-statements-per-line": ["error", { "max": 1 }],
 		"new-cap": ["error", { "newIsCap": true, "properties": true }],
 		"no-alert": "error",
 		"no-array-constructor": "error",
 		"no-caller": "error",
-		"no-confusing-arrow": ["error", { "allowParens": true }],
 		"no-console": "error",
 		"no-duplicate-imports": ["error", { "includeExports": true }],
 		"no-eval": "error",
@@ -40,10 +30,8 @@ module.exports = {
 		"no-labels": "error",
 		"no-lone-blocks": "error",
 		"no-loop-func": "error",
-		"no-multi-spaces": "error",
 		"no-nested-ternary": 0,
 		"no-new": "error",
-		"no-new-object": "error",
 		"no-octal-escape": "error",
 		"no-param-reassign": 0,
 		"no-proto": "error",
@@ -72,7 +60,6 @@ module.exports = {
 		"no-useless-concat": "error",
 		"no-useless-escape": "error",
 		"no-var": "error",
-		"no-whitespace-before-property": "error",
 		"no-with": "error",
 		"prefer-const": [
 			"error", {
@@ -81,9 +68,7 @@ module.exports = {
 			}
 		],
 		"radix": "error",
-		"semi": ["error", "always"],
 		"strict": ["error", "function"],
-		"wrap-iife": ["error", "inside"],
 		"yoda": "error"
 	}
 };
