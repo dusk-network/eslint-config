@@ -33,15 +33,16 @@
 	"scripts": {
 		"bump": "bump package.json package-lock.json",
 		"check": "npm run check-rules && npm run lint",
-		"check-js": "eslint-find-rules -nd js/index.js",
+		"check-js": "eslint-find-rules -nd js/index.js && eslint-config-prettier js/index.js",
 		"check-rules": "npm run check-js && npm run check-svelte",
-		"check-svelte": "eslint-find-rules -nd svelte/index.js",
+		"check-svelte": "eslint-find-rules -nd svelte/index.js && eslint-config-prettier svelte/index.js",
 		"lint": "eslint ."
 	},
 	"version": "2.1.0",
 	"devDependencies": {
 		"@jsdevtools/version-bump-prompt": "6.1.0",
 		"eslint": "8.56.0",
+		"eslint-config-prettier": "9.1.0",
 		"eslint-find-rules": "4.1.0",
 		"eslint-plugin-import": "2.29.1",
 		"eslint-plugin-svelte": "2.35.1",
@@ -52,6 +53,7 @@
 	},
 	"peerDependencies": {
 		"eslint": ">=8.56.0",
-		"eslint-plugin-import": ">=2.29.1"
+		"eslint-plugin-import": ">=2.29.1",
+		"eslint-config-prettier": ">=9.1.0"
 	}
 }
