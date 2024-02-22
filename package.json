@@ -38,7 +38,7 @@
 		"check-svelte": "eslint-find-rules -nd svelte/index.js && eslint-config-prettier svelte/index.js",
 		"lint": "eslint ."
 	},
-	"version": "2.1.0",
+	"version": "3.0.0",
 	"devDependencies": {
 		"@jsdevtools/version-bump-prompt": "6.1.0",
 		"eslint": "8.56.0",
