@@ -1,59 +1,62 @@
 {
-	"author": {
-		"name": "Dusk Network B.V.",
-		"url": "https://dusk.network/",
-		"mail": "info@dusk.network"
-	},
-	"bugs": "https://github.com/dusk-network/dusk-eslint-config/issues/",
-	"contributors": [
-		"Andrea Scartabelli <andrea.scartabelli@gmail.com>",
-		"Kieran Hall <kieran@dusk.network>"
-	],
-	"description": "ESLint config used by Dusk JavaScript apps",
-	"engines": {
-		"node": ">=16.0.0"
-	},
-	"files": [
-		"js/**/*.js",
-		"svelte/**/*.js"
-	],
-	"homepage": "https://github.com/dusk-network/dusk-eslint-config/",
-	"keywords": [
-		"dusk",
-		"dusk network",
-		"eslint",
-		"eslintconfig"
-	],
-	"license": "MPL-2.0",
-	"name": "@dusk-network/eslint-config",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/dusk-network/dusk-eslint-config.git"
-	},
-	"scripts": {
-		"bump": "bump package.json package-lock.json",
-		"check": "npm run check-rules && npm run lint",
-		"check-js": "eslint-find-rules -nd js/index.js && eslint-config-prettier js/index.js",
-		"check-rules": "npm run check-js && npm run check-svelte",
-		"check-svelte": "eslint-find-rules -nd svelte/index.js && eslint-config-prettier svelte/index.js",
-		"lint": "eslint ."
-	},
-	"version": "3.0.0",
-	"devDependencies": {
-		"@jsdevtools/version-bump-prompt": "6.1.0",
-		"eslint": "8.56.0",
-		"eslint-config-prettier": "9.1.0",
-		"eslint-find-rules": "4.1.0",
-		"eslint-plugin-import": "2.29.1",
-		"eslint-plugin-svelte": "2.35.1",
-		"svelte": "4.2.10"
-	},
-	"optionalDependencies": {
-		"eslint-plugin-svelte": ">=2.35.1"
-	},
-	"peerDependencies": {
-		"eslint": ">=8.56.0",
-		"eslint-plugin-import": ">=2.29.1",
-		"eslint-config-prettier": ">=9.1.0"
-	}
+  "author": {
+    "name": "Dusk Network B.V.",
+    "url": "https://dusk.network/",
+    "mail": "info@dusk.network"
+  },
+  "bugs": "https://github.com/dusk-network/dusk-eslint-config/issues/",
+  "contributors": [
+    "Andrea Scartabelli <andrea.scartabelli@gmail.com>",
+    "Kieran Hall <kieran@dusk.network>"
+  ],
+  "description": "ESLint config used by Dusk JavaScript apps",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "js/**/*.js",
+    "svelte/**/*.js"
+  ],
+  "homepage": "https://github.com/dusk-network/dusk-eslint-config/",
+  "keywords": [
+    "dusk",
+    "dusk network",
+    "eslint",
+    "eslintconfig"
+  ],
+  "license": "MPL-2.0",
+  "name": "@dusk-network/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dusk-network/dusk-eslint-config.git"
+  },
+  "scripts": {
+    "bump": "bump package.json package-lock.json",
+    "check": "npm run check-rules && npm run check-format && npm run lint",
+    "check-format": "prettier . --check",
+    "check-js": "eslint-find-rules -nd js/index.js && eslint-config-prettier js/index.js",
+    "check-rules": "npm run check-js && npm run check-svelte",
+    "check-svelte": "eslint-find-rules -nd svelte/index.js && eslint-config-prettier svelte/index.js",
+    "lint": "eslint ."
+  },
+  "version": "3.0.0",
+  "devDependencies": {
+    "@dusk-network/prettier-config": "1.0.0",
+    "@jsdevtools/version-bump-prompt": "6.1.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-find-rules": "4.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-svelte": "2.35.1",
+    "prettier": "3.2.5",
+    "svelte": "4.2.10"
+  },
+  "optionalDependencies": {
+    "eslint-plugin-svelte": ">=2.35.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.56.0",
+    "eslint-config-prettier": ">=9.1.0",
+    "eslint-plugin-import": ">=2.29.1"
+  }
 }

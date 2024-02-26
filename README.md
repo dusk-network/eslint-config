@@ -9,6 +9,7 @@ npm i -D @dusk-network/eslint-config
 ```
 
 The package requires the following peer dependencies:
+
 - [`eslint`](https://github.com/eslint/eslint) `>=8`
 - [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import) `>=2`
 

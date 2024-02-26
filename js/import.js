@@ -1,5 +1,5 @@
 module.exports = {
-	rules: {
-		"import/no-duplicates": 0
-	}
+  rules: {
+    "import/no-duplicates": 0,
+  },
 };
