@@ -39,7 +39,7 @@
     "check-svelte": "eslint-find-rules -nd svelte/index.js && eslint-config-prettier svelte/index.js",
     "lint": "eslint ."
   },
-  "version": "3.0.1",
+  "version": "3.0.2",
   "devDependencies": {
     "@dusk-network/prettier-config": "1.0.0",
     "@jsdevtools/version-bump-prompt": "6.1.0",
