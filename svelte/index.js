@@ -6,6 +6,7 @@ const rules = [
 module.exports = {
 	extends: [
 		"plugin:svelte/recommended",
+		"plugin:svelte/prettier",
 		...rules
 	],
 	parserOptions: {
