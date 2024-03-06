@@ -1,4 +1,6 @@
-const rules = ["./base", "./import", "./style"].map(require.resolve);
+const rules = ["./base", "./import", "./import-newlines", "./style"].map(
+  require.resolve
+);
 
 module.exports = {
   extends: [
@@ -12,5 +14,6 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
+  plugins: ["import-newlines"],
   rules: {},
 };
