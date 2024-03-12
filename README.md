@@ -8,29 +8,34 @@ ESLint config used by [Dusk](https://dusk.network/) JavaScript apps.
 npm i -D @dusk-network/eslint-config
 ```
 
-The package requires the following peer dependencies:
+Your package requires the following dev-dependencies:
 
-- [`eslint`](https://github.com/eslint/eslint) `>=8.57.0`
-- [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) `>=9.1.0`
-- [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import) `>=2.29.1`
-- [`eslint-plugin-import-newlines`](https://github.com/SeinopSys/eslint-plugin-import-newlines) `>=1.3.4`
+- [`eslint`](https://github.com/eslint/eslint)
+- [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier)
+- [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import)
+- [`eslint-plugin-import-newlines`](https://github.com/SeinopSys/eslint-plugin-import-newlines)
 
-If you are using Svelte rules the package needs the following optional dependency:
+If you are using Svelte rules your package needs the following dev-dependency:
 
-- [`eslint-plugin-svelte`](https://github.com/sveltejs/eslint-plugin-svelte) `>=2.35.1`
+- [`eslint-plugin-svelte`](https://github.com/sveltejs/eslint-plugin-svelte)
+
+If you are using Vitest rules your package needs the following dev-dependency:
+
+- [`eslint-plugin-vitest`](https://github.com/veritem/eslint-plugin-vitest)
 
 ## Usage
 
 Add the rulesets you want in the `extends` section of your ESLint configuration file.
 
-e.g. to use both JS and Svelte rules:
+e.g. to use both JS, Svelte and Vitest rules:
 
 ```javascript
 // ...
 
 extends: [
     "@dusk-network/eslint-config/js",
-    "@dusk-network/eslint-config/svelte"
+    "@dusk-network/eslint-config/svelte",
+    "@dusk-network/eslint-config/vitest"
 ]
 
 // ...

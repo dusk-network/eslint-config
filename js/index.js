@@ -15,5 +15,4 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["import-newlines"],
-  rules: {},
 };
