@@ -15,7 +15,6 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["svelte"],
-  rules: {},
   settings: {
     "import/parsers": {
       espree: [".js"],
