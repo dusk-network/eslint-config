@@ -1,18 +1,30 @@
-const rules = ["./base", "./import", "./import-newlines", "./style"].map(
-  require.resolve
-);
+import js from "@eslint/js";
+import importPlugin from "eslint-plugin-import";
+import prettierConfig from "eslint-config-prettier/flat";
 
-module.exports = {
-  extends: [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "prettier",
-    ...rules,
-  ],
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-  plugins: ["import-newlines"],
+import baseRules from "./base.js";
+import importRules from "./import.js";
+import styleRules from "./style.js";
+
+const rules = {
+  ...baseRules,
+  ...importRules,
+  ...styleRules,
 };
+
+export default [
+  js.configs.recommended,
+  importPlugin.flatConfigs.recommended,
+  {
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+      },
+    },
+    rules: {
+      ...rules,
+    },
+  },
+  prettierConfig,
+];

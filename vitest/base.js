@@ -1,3 +1,1 @@
-module.exports = {
-  rules: {},
-};
+export default {};
