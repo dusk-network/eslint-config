@@ -29,9 +29,9 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "js/**/*.js",
-    "svelte/**/*.js",
-    "vitest/**/*.js"
+    "js/**/*.{js,ts}",
+    "svelte/**/*.{js,ts}",
+    "vitest/**/*.{js,ts}"
   ],
   "homepage": "https://github.com/dusk-network/eslint-config/",
   "keywords": [
@@ -58,7 +58,10 @@
     "lint:fix": "eslint . --fix"
   },
   "type": "module",
-  "version": "4.0.0",
+  "version": "4.0.1",
+  "dependencies": {
+    "eslint-plugin-import": "2.31.0"
+  },
   "devDependencies": {
     "@dusk-network/prettier-config": "1.1.0",
     "@eslint/eslintrc": "3.3.1",
@@ -67,7 +70,6 @@
     "eslint": "9.26.0",
     "eslint-config-prettier": "10.1.5",
     "eslint-find-rules": "5.0.0",
-    "eslint-plugin-import": "2.31.0",
     "eslint-plugin-svelte": "3.5.1",
     "globals": "16.1.0",
     "prettier": "3.5.3",
