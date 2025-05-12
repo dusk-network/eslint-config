@@ -11,7 +11,22 @@
   ],
   "description": "ESLint config used by Dusk JavaScript apps",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20.18.0"
+  },
+  "exports": {
+    ".": {
+      "default": "./js/index.js",
+      "types": "./js/index.d.ts"
+    },
+    "./svelte": {
+      "default": "./svelte/index.js",
+      "types": "./svelte/index.d.ts"
+    },
+    "./vitest": {
+      "default": "./vitest/index.js",
+      "types": "./vitest/index.d.ts"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "js/**/*.js",
@@ -32,36 +47,39 @@
     "url": "https://github.com/dusk-network/eslint-config.git"
   },
   "scripts": {
-    "check": "npm run check-rules && npm run format && npm run lint",
+    "check": "npm run check:rules && npm run format && npm run lint",
+    "check:js-rules": "ESLINT_CONFIG_PRETTIER_NO_DEPRECATED=true eslint-find-rules -nd --flatConfig js/index.js && eslint-config-prettier js/index.js",
+    "check:rules": "npm run check:js-rules && npm run check:svelte-rules && npm run check:vitest-rules",
+    "check:svelte-rules": "ESLINT_CONFIG_PRETTIER_NO_DEPRECATED=true eslint-find-rules -nd --flatConfig svelte/index.js && eslint-config-prettier svelte/index.js",
+    "check:vitest-rules": "ESLINT_CONFIG_PRETTIER_NO_DEPRECATED=true eslint-find-rules -nd --flatConfig vitest/index.js && eslint-config-prettier vitest/index.js",
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
-    "check-js": "eslint-find-rules -nd js/index.js && eslint-config-prettier js/index.js",
-    "check-rules": "npm run check-js && npm run check-svelte",
-    "check-svelte": "eslint-find-rules -nd svelte/index.js && eslint-config-prettier svelte/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "version": "3.3.1",
+  "type": "module",
+  "version": "4.0.0",
   "devDependencies": {
     "@dusk-network/prettier-config": "1.1.0",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-find-rules": "4.1.0",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-import-newlines": "1.4.0",
-    "eslint-plugin-svelte": "2.35.1",
-    "eslint-plugin-vitest": "0.3.26",
-    "prettier": "3.2.5",
-    "svelte": "4.2.12"
+    "@eslint/eslintrc": "3.3.1",
+    "@eslint/js": "9.26.0",
+    "@vitest/eslint-plugin": "1.1.44",
+    "eslint": "9.26.0",
+    "eslint-config-prettier": "10.1.5",
+    "eslint-find-rules": "5.0.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-svelte": "3.5.1",
+    "globals": "16.1.0",
+    "prettier": "3.5.3",
+    "svelte": "5.28.2"
   },
   "optionalDependencies": {
-    "eslint-plugin-svelte": ">=2.35.1",
-    "eslint-plugin-vitest": ">=0.3.26"
+    "@vitest/eslint-plugin": ">=1.1.43",
+    "eslint-plugin-svelte": ">=3.5.1"
   },
   "peerDependencies": {
-    "eslint": ">=8.57.0",
-    "eslint-config-prettier": ">=9.1.0",
-    "eslint-plugin-import": ">=2.29.1",
-    "eslint-plugin-import-newlines": ">=1.4.0"
+    "@eslint/js": ">=9.26.0",
+    "eslint": ">=9.26.0",
+    "eslint-config-prettier": ">=10.1.2"
   }
 }
